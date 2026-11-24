@@ -7,11 +7,12 @@ assert.match(html,/grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(html,/<option value="reflectOnly">/);
 assert.doesNotMatch(html,/<option value="reflection">|<option value="two">/);
 assert.match(html,/id="instantStrength"/);
-assert.match(html,/sim-v18\.js/);
+assert.match(html,/sim-v19\.js/);
 assert.match(html,/layout-v10\.js/);
 assert.match(html,/id="studyPointsList"/);
 assert.match(html,/id="doorArrivalStatus"/);
-let sim=fs.readFileSync(path.join(dir,'sim-v18.js'),'utf8');
+let sim=fs.readFileSync(path.join(dir,'sim-v19.js'),'utf8');
+assert.doesNotMatch(sim,/bestRouterCandidate|#0a9a74/,'recommendation ring is no longer painted on the map');
 sim=sim.replace(/\}\)\(\);\s*$/,'globalThis.api={buildModel,predictAt,drawOuter,rebuildContinuousMedia,advanceContinuous,instantaneousDbm,repeatedDbm,setFront(n){front=n},get router(){return router},get probe(){return probe},get doors(){return doors},get zoom(){return zoom},get panX(){return panX},get waveTick(){return waveTick},get waveStyle(){return waveStyle},get outerReady(){return outerReady},get outerAmplitude(){return outerAmplitude},get velocity(){return velocity},get edgeRight(){return edgeRight},get CW(){return CW},get CH(){return CH},get CG(){return CG},get EG(){return EG}};})();');
 const nodes={},handlers={},images=new Map();let offscreen=0,nextFrame,capturedCsv='';
 function ctx(name){return {fillStyle:'',strokeStyle:'',createImageData:(w,h)=>({width:w,height:h,data:new Uint8ClampedArray(w*h*4)}),putImageData:img=>images.set(name,img),drawImage(){},clearRect(){},fillRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},fill(){},arc(){},save(){},restore(){},translate(){},scale(){},setLineDash(){},fillText(){},closePath(){},quadraticCurveTo(){},measureText:s=>({width:s.length*8})};}
