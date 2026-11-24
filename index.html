@@ -22,10 +22,9 @@ button.danger{border-color:#cfdae3;background:#f4f8fb}
 .metrics h2{font-size:15px;margin:0 0 2px}.metric{padding:12px 13px;border-radius:10px;background:#f2f7fa;min-width:0;min-height:67px;height:auto}
 .metric small{display:block;color:#647b8e;font-size:11px;line-height:1.3;overflow-wrap:anywhere}.metric strong{display:block;color:#205b80;font-size:21px;line-height:1.3;margin-top:3px;overflow-wrap:anywhere}
 .arrival-status{display:block;margin-top:6px;color:#895a16;font-size:11px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}.arrival-status:empty{display:none}
-.metric-foot{display:grid;gap:5px;color:#77899a;font-size:11px;padding:5px 3px}.metric-note{margin-top:auto;border-top:1px solid #e2e9ef;padding:12px 3px 2px;color:#667b8d;font-size:11px;line-height:1.5}
+.metric-foot{display:grid;gap:5px;color:#52667b;font-size:12px;padding:7px 3px;border-top:1px solid #e2e9ef}.metric-primary{background:#e8f3f8;border:1px solid #c7e1ee}.metric-primary strong{font-size:26px}.metric-group{display:grid;gap:8px}.metric-group h3{font-size:12px;color:#52667b;margin:5px 0 0}.metric-group[hidden]{display:none!important}
 .map-card{overflow:hidden}.mapbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px 7px}
 .mapbar strong{font-size:15px}.map-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px}.map-actions span{font-size:12px;color:#667a8d}
-.mobile-jump{display:none;min-height:44px;padding:10px 12px;border:1px solid #c6d4e0;border-radius:9px;background:#f8fbfd;color:#1769ad;font-size:13px;font-weight:700;text-decoration:none}
 .help-button{width:29px;height:29px;min-height:29px;border-radius:50%;padding:0;font-weight:800}
 .canvaswrap{padding:0 12px 10px}canvas{display:block;width:100%;height:auto;touch-action:none;background:white;border:1px solid #cbd8e4;border-radius:10px;cursor:grab}
 .legend{display:flex;gap:8px 17px;flex-wrap:wrap;padding:9px 17px 15px;border-top:1px solid #edf1f5;font-size:12px;color:#596f82}
@@ -35,12 +34,12 @@ button.danger{border-color:#cfdae3;background:#f4f8fb}
 .help-dialog::backdrop{background:#14283f80}.help-dialog h2{margin:0 0 12px}.help-dialog h3{font-size:15px;margin:18px 0 6px}
 .help-dialog p,.help-dialog li{font-size:13px;line-height:1.6;color:#4d6175}.help-dialog table{border-collapse:collapse;width:100%;font-size:12px}
 .help-dialog th,.help-dialog td{border-bottom:1px solid #e2e9ef;padding:6px;text-align:left}.help-close{float:right}
-.study{margin-top:12px;padding:18px 19px}.study h2{font-size:18px;margin:0 0 8px}.study p{font-size:13px;line-height:1.55;color:#52667b;margin:6px 0 12px}
+.study{margin-top:12px;padding:18px 19px}.study-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.study h2{font-size:18px;margin:0}.study p{font-size:13px;line-height:1.55;color:#52667b;margin:6px 0 12px}
 .study-actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.study-actions button{min-height:44px}
-.study-points{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.study-points button{text-align:left;min-width:0;white-space:normal;font-size:12px;line-height:1.35}
+.study-points{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.study-point{display:flex;align-items:center;gap:5px;min-width:0}.study-point button{text-align:left;min-width:0;flex:1;white-space:normal;font-size:12px;line-height:1.35}.study-point label{display:grid;justify-items:center;gap:2px;font-size:10px;color:#52667b}.study-point input{width:19px;height:19px;margin:0;accent-color:#1769ad}.study-label{font-size:12px;font-weight:700;color:#52667b;margin:8px 0}
 .study-points small{display:block;color:#647b8e;font-weight:500;margin-top:3px}.study-output{margin-top:12px;padding:12px;border:1px solid #d7e1ea;border-radius:10px;background:#f8fbfd;font-size:13px;line-height:1.5}
 .study-output:empty{display:none}.study-output ol{margin:8px 0 0;padding-left:23px}.study-output li{margin:7px 0}.study-output button{margin-left:6px;min-height:34px;font-size:12px}
-@media(max-width:930px){.toolbar{align-items:start}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.field{min-width:0}.field select,.field input{width:100%;min-height:44px}.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.actions button{width:100%;min-height:44px}.workspace{grid-template-columns:1fr}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));height:auto!important;overflow:visible}.metrics h2,.metric-foot,.metric-note{grid-column:1/-1}.help-button{width:44px;height:44px;min-height:44px}.mobile-jump{display:inline-flex;align-items:center}.mapbar{flex-wrap:wrap}.study-points{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:930px){.toolbar{align-items:start}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.field{min-width:0}.field select,.field input{width:100%;min-height:44px}.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.actions button{width:100%;min-height:44px}.workspace{grid-template-columns:1fr}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));height:auto!important;overflow:visible}.metrics h2,.metric-foot,.metric-group,.metric-primary{grid-column:1/-1}.metric-group{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-group h3{grid-column:1/-1}.help-button{width:44px;height:44px;min-height:44px}.mapbar{flex-wrap:wrap}.study-points{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.shell{padding:12px}.toolbar{padding:13px}.fields,.actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.metrics{padding:10px;gap:6px}.metric{padding:9px}.metric strong{font-size:18px}.mapbar{padding:10px}.legend{font-size:11px}.map-actions{gap:6px}.study{padding:13px}.study-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
@@ -64,25 +63,21 @@ button.danger{border-color:#cfdae3;background:#f4f8fb}
   <button id="resetAll" class="danger">전체 초기화</button>
  </div>
 </section>
-<div class="workspace"><section id="mapPanel" class="card map-card"><div class="mapbar"><strong>평면도와 파동</strong><div class="map-actions"><span id="reflectionStatus"></span><span id="zoomReadout">100%</span><a class="mobile-jump" href="#metricsPanel">결과 보기 ↓</a><button id="helpButton" class="help-button" aria-label="도움말 열기">?</button></div></div>
+<div class="workspace"><section id="mapPanel" class="card map-card"><div class="mapbar"><strong>평면도와 파동</strong><div class="map-actions"><span id="reflectionStatus"></span><span id="zoomReadout">100%</span><button id="helpButton" class="help-button" aria-label="도움말 열기">?</button></div></div>
  <div class="canvaswrap"><canvas id="map" width="920" height="650" aria-label="Wi-Fi 파동 시뮬레이션 지도"></canvas></div>
  <div class="legend"><span class="key"><i class="sw"></i>콘크리트</span><span class="key"><i class="sw glass"></i>유리·창문</span><span class="key"><i class="sw wood"></i>나무문</span><span class="key"><i class="sw steel"></i>금속문</span><span id="waveLegend" class="key"><i class="sw wavep"></i>파동 + <i class="sw waven"></i>파동 −</span><span id="powerLegend" class="key power-legend"><i class="sw"></i>파랑: 약함 · 주황: 강함</span></div>
 </section>
-<aside id="metricsPanel" class="card metrics" aria-label="예측 결과"><h2>관찰점의 예상 신호</h2><a class="mobile-jump" href="#mapPanel">지도 보기 ↑</a>
- <div class="metric"><small>현재 문 상태 · 예상 RSSI</small><strong id="currentStrength">—</strong><span id="doorArrivalStatus" class="arrival-status" role="status" aria-live="polite"></span></div>
- <div class="metric"><small>같은 위치 · 반사 제외</small><strong id="baseStrength">—</strong></div>
- <div class="metric"><small>현재 파동 · 순간 세기</small><strong id="instantStrength">시작 후 계산</strong></div>
- <div class="metric"><small>현재 파동 · 최근 평균 세기</small><strong id="repeatedStrength">—</strong></div>
- <div class="metric"><small>모든 문 열림 · 예상 RSSI</small><strong id="openStrength">—</strong></div>
- <div class="metric"><small>모든 문 닫힘 · 예상 RSSI</small><strong id="closedStrength">—</strong></div>
+<aside id="metricsPanel" class="card metrics" aria-label="예측 결과"><h2>관찰점의 예상 신호</h2>
+ <div class="metric metric-primary"><small>현재 설정 · 예상 수신 세기</small><strong id="currentStrength">—</strong><span id="doorArrivalStatus" class="arrival-status" role="status" aria-live="polite"></span></div>
+ <div id="waveMetrics" class="metric-group"><h3>파동 모형의 변화</h3><div class="metric"><small>지금 이 순간</small><strong id="instantStrength">시작 후 계산</strong></div><div class="metric"><small>최근 시간 평균</small><strong id="repeatedStrength">—</strong></div></div>
+ <div id="directMetrics" class="metric-group"><h3>문 상태를 바꾸면 · 반사 제외 모형</h3><div class="metric"><small>모든 문 열림</small><strong id="openStrength">—</strong></div><div class="metric"><small>모든 문 닫힘</small><strong id="closedStrength">—</strong></div></div>
  <div class="metric"><small>공유기와 관찰점의 직선 거리</small><strong id="distance">—</strong></div>
  <div class="metric-foot"><span id="routerPos"></span><span id="probePos"></span></div>
- <p class="metric-note">공유기: U+ 기가와이파이6 GAPD-7500<br>1m 기준: 2.4 GHz 약 −26 dBm · 5 GHz 약 −24.5 dBm.<br>공유기 바로 위: 2.4 GHz 약 −9 dBm · 5 GHz 약 −15 dBm. 반복 반사 RSSI는 관찰용 파동의 별도 실험적 추정입니다.</p>
 </aside></div>
 <section id="studyPanel" class="card study" aria-label="실험 측정점과 공유기 위치 탐색">
- <h2>방별 측정점 · 공유기 위치 탐색</h2>
- <p>각 점을 누르면 관찰점이 이동합니다. 해당 공간까지의 문을 각각 열고 닫아 예측과 실측을 비교하세요. 예를 들어 안방 발코니 1은 안방문과 발코니문을 조합한 2×2=4가지입니다. 현관문 밖도 포함합니다. 위치 탐색은 약 0.75m 격자의 반사 제외 모형에서 가장 약한 측정점의 세기를 높이는 방식입니다.</p>
- <div class="study-actions"><button id="toggleStudyPoints">지도 측정점 숨기기</button><button id="studyExport">문 조합 측정표 CSV</button><button id="studySearch" class="primary">공유기 위치 탐색</button></div>
+ <div class="study-header"><h2>방별 측정점 · 공유기 위치 탐색</h2><button id="studyHelp" class="help-button" aria-label="실험 도움말 열기">?</button></div>
+ <div class="study-actions"><button id="toggleStudyPoints">지도 측정점 숨기기</button><button id="toggleRouterGrid">공유기 격자 표시</button><button id="studyExport">문 조합 측정표 CSV</button><button id="studySearch" class="primary">선택한 점으로 위치 탐색</button></div>
+ <div class="study-label">탐색에 넣을 측정점 선택 · 점 이름을 누르면 관찰점 이동</div>
  <div id="studyPointsList" class="study-points"></div>
  <div id="studySearchResult" class="study-output" role="status" aria-live="polite"></div>
 </section>
@@ -97,8 +92,10 @@ button.danger{border-color:#cfdae3;background:#f4f8fb}
  <p>콘크리트 손실의 기본값은 2.4GHz 9dB, 5GHz 16dB입니다. ‘20cm 철근 참고값’은 다른 건물의 약 203mm 철근콘크리트 실험에서 얻은 5GHz 55dB를 적용합니다. 2.4GHz 9dB는 다른 주거용 철근콘크리트 실험값을 유지합니다. 우리 아파트의 구조는 철근콘크리트로 기록돼 있지만, 집 안의 모든 벽이 같은 철근콘크리트라는 뜻은 아닙니다. 두 값의 차이가 커서 시나리오로만 비교하며, 반사율은 여전히 균일 콘크리트 근사입니다.</p>
  <h3>재질별 통과 손실 (dB)</h3><table><thead><tr><th>재질</th><th>2.4 GHz</th><th>5 GHz</th><th>근거</th></tr></thead><tbody id="materialRows"></tbody></table>
  <p>공유기는 U+ 기가와이파이6 GAPD-7500입니다. 갤럭시 S22 울트라로 공유기가 보이는 약 1m 위치에서 다시 확인한 기준값(2.4 GHz 약 −26 dBm, 5 GHz 약 −24.5 dBm)을 사용합니다. 기준점은 정확도 평가에서 제외합니다. 세 모형의 예상값을 각각 방별 실측값과 비교해야 하며, 반사를 넣었다고 정확도가 반드시 높아지는 것은 아닙니다.</p>
- <p>아래 실험 영역의 P01~P19는 방별 고정 측정점입니다. CSV에는 각 공간에 관련된 문 조합과 반사 제외 예측만 자동 입력됩니다. 다른 두 파동 모형의 최근 평균값과 스마트폰 실측값은 같은 조건에서 별도로 기록하세요. 공유기 위치 탐색은 모든 문을 닫았을 때의 반사 제외 예측으로 최저 RSSI를 높이는 1차 후보 검색입니다. 이 모형에서는 관련 문을 열면 통과 손실이 늘지 않으므로 닫힘이 문 조합의 최약 조건입니다. 이 성질은 반사 파동 모형에는 적용되지 않습니다. 현관문 밖을 포함한 순위와 제외한 순위를 따로 보여 줍니다. 이를 실제 최적 위치로 확정하려면 설치 가능성과 현장 측정이 필요합니다.</p>
+ <p>공유기 바로 위에서 잰 값은 2.4 GHz 약 −9 dBm, 5 GHz 약 −15 dBm입니다. 반복 반사 RSSI는 관찰용 파동의 별도 실험적 추정입니다.</p>
+ <p>실험 영역의 P01~P19 이름을 누르면 관찰점이 이동합니다. 해당 공간까지의 문을 각각 열고 닫아 예측과 실측을 비교하세요. 예를 들어 안방 발코니 1은 안방문과 발코니문을 조합한 2×2=4가지입니다. 현관문 밖도 포함합니다. CSV에는 모든 점의 문 조합과 반사 제외 예측만 자동 입력됩니다. 다른 두 파동 모형의 최근 평균값과 스마트폰 실측값은 같은 조건에서 별도로 기록하세요.</p>
+ <p>위치 탐색은 약 0.75m 격자의 반사 제외 모형에서 선택한 측정점 중 가장 약한 세기를 높이는 방식입니다. 선택 체크는 위치 탐색에만 적용하며, 기본값은 실내 18점입니다. 현관문 밖 P19도 선택할 수 있습니다. 모든 문을 닫은 조건에서 계산하고, 최약값이 같으면 평균값을 비교합니다. 실제 최적 위치로 확정하려면 설치 가능성과 현장 측정이 필요합니다.</p>
  <p>자료: <a href="https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.2040-4-202509-I%21%21PDF-E.pdf" target="_blank" rel="noopener">ITU-R P.2040-4 반사·재질</a> · <a href="https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.1238-13-202509-I%21%21PDF-E.pdf" target="_blank" rel="noopener">ITU-R P.1238-13 실내 경로</a> · <a href="https://assets.publishing.service.gov.uk/media/683711f64115cfe5bfaa2ca2/DURHAM_3.PDF" target="_blank" rel="noopener">5GHz 철근콘크리트 실험</a> · <a href="https://www.mdpi.com/2673-4591/158/1/16" target="_blank" rel="noopener">2.4GHz 주거 재질 실험</a>.</p>
 </dialog>
-<script src="layout-v9.js"></script><script src="reflection-v2.js"></script><script src="sim-v17.js"></script>
+<script src="layout-v10.js"></script><script src="reflection-v2.js"></script><script src="sim-v18.js"></script>
 </body></html>
