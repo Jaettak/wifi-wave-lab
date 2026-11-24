@@ -561,10 +561,22 @@
     }
     if(showStudyPoints){
       ctx.save();ctx.lineWidth=2*markerScale;ctx.font=`700 ${11*markerScale}px system-ui`;
+      const labelBoxes=[];
       for(const point of studyPoints){
         ctx.fillStyle=point.outside?'#77539b':'#16887f';ctx.strokeStyle='#fff';
         ctx.beginPath();ctx.arc(point.local.x,point.local.y,5*markerScale,0,2*Math.PI);ctx.fill();ctx.stroke();
-        ctx.fillStyle='#2b4556';ctx.fillText(point.id,point.local.x+8*markerScale,point.local.y-6*markerScale);
+        const width=ctx.measureText(point.id).width+6*markerScale,height=15*markerScale;
+        const x=point.local.x,y=point.local.y,s=markerScale;
+        const options=[
+          {x:x+8*s,y:y-height-3*s},{x:x+8*s,y:y+3*s},
+          {x:x-width-8*s,y:y-height-3*s},{x:x-width-8*s,y:y+3*s},
+          {x:x-width/2,y:y-height-9*s},{x:x-width/2,y:y+9*s}
+        ];
+        const overlaps=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+        const choice=options.map(option=>({...option,w:width,h:height})).find(box=>box.x>=0&&box.x+box.w<=W&&box.y>=0&&box.y+box.h<=H&&!labelBoxes.some(other=>overlaps(box,other)))||options[0];
+        labelBoxes.push({...choice,w:width,h:height});
+        ctx.fillStyle='#fffffff0';ctx.fillRect(choice.x,choice.y,width,height);
+        ctx.fillStyle='#2b4556';ctx.fillText(point.id,choice.x+3*s,choice.y+11.5*s);
       }
       if(bestRouterCandidate){
         ctx.strokeStyle='#0a9a74';ctx.lineWidth=3*markerScale;
